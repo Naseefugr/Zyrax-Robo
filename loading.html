@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading | ZyraX Robo</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #0d1117;
+      color: #d1f7d6;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      transition: opacity 2s ease;
+    }
+
+    .circle-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #00a76f;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.25);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .circle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .progress-container {
+      width: 300px;
+      height: 20px;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 15px;
+      box-shadow: 0 0 5px rgba(0, 255, 204, 0.2);
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #00a76f, #00b4ff);
+      animation: loadProgress 8s ease forwards;
+    }
+
+    .loading-text {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #c1fefe;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.95rem;
+      color: #999;
+      background: linear-gradient(to right, #00a76f, #00b4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+      opacity: 0.8;
+      animation: fadeIn 3s ease-in-out 2s forwards;
+    }
+
+    @keyframes loadProgress {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .progress-container {
+        width: 240px;
+        height: 16px;
+      }
+
+      .loading-text {
+        font-size: 1rem;
+      }
+
+      .footer {
+        font-size: 0.85rem;
+        bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="circle-image">
+    <img src="./file/img/atm2.png" alt="ZyraX Logo" />
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
+
+  <div class="loading-text">Initializing ZyraX Quiz Zone...</div>
+
+  <div class="footer">AHSAn – IT & Media Wing</div>
+
+  <script>
+    // Total delay = 8s (progress) + 2s (fade)
+    setTimeout(() => {
+      document.body.style.animation = "fadeOut 2s forwards";
+      setTimeout(() => {
+        window.location.href = "welcome.html"; // Replace with your actual welcome page
+      }, 2000);
+    }, 8000);
+  </script>
+
+</body>
+</html>
