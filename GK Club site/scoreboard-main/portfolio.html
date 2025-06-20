@@ -1,0 +1,104 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+export default function Portfolio() {
+  return (
+    <div className="p-6 max-w-5xl mx-auto space-y-8">
+      <header className="text-center space-y-2">
+        <h1 className="text-4xl font-bold">Naseef Ugrapuram</h1>
+        <p className="text-lg text-gray-600">Graphics Designer | Front-End Developer | Visual Storyteller</p>
+        <div className="flex justify-center space-x-4 text-blue-600">
+          <a href="mailto:naseefugr@gmail.com">naseefugr@gmail.com</a>
+          <span>|</span>
+          <a href="tel:+919562934627">+91 9562934627</a>
+        </div>
+        <div className="flex justify-center space-x-4">
+          <a href="https://instagram.com/naseef_ugr" target="_blank" rel="noopener noreferrer">@naseef_ugr</a>
+          <a href="https://instagram.com/pixelpro_graphics" target="_blank" rel="noopener noreferrer">@pixelpro_graphics</a>
+        </div>
+      </header>
+
+      <section>
+        <h2 className="text-2xl font-semibold border-b pb-2">Professional Summary</h2>
+        <p className="mt-2 text-gray-700">
+          Creative and tech-savvy digital artist behind PixelPro_Graphics, skilled in poster design, video editing,
+          branding, card design, and web development. Known for delivering impactful visuals and responsive websites
+          that blend design with functionality. Open to freelance or team-based roles to bring ideas to life across
+          digital platforms.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold border-b pb-2">Portfolio Overview</h2>
+        <div className="grid md:grid-cols-2 gap-6 mt-4">
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold">Design & Visual Media</h3>
+              <ul className="list-disc ml-5 text-gray-700 mt-2">
+                <li>Poster Design (Event, Campaign, Social Media)</li>
+                <li>Logo & Title Design</li>
+                <li>Brand Identity Development</li>
+                <li>Card Design (Wedding, ID, Business)</li>
+                <li>Print Media: Flyers, Brochures, Certificates</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold">Video Editing</h3>
+              <ul className="list-disc ml-5 text-gray-700 mt-2">
+                <li>Short-form Videos, Reels, Montages</li>
+                <li>Title Animations, Intros</li>
+                <li>Tools: Premiere Pro, After Effects, CapCut, VN Editor</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold">Web Development & Coding</h3>
+              <ul className="list-disc ml-5 text-gray-700 mt-2">
+                <li>HTML, CSS, JavaScript</li>
+                <li>Responsive Websites & Landing Pages</li>
+                <li>UI Design: Figma, Adobe XD</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold">Tools & Software</h3>
+              <ul className="list-disc ml-5 text-gray-700 mt-2">
+                <li>Adobe Suite: Photoshop, Illustrator, InDesign</li>
+                <li>Premiere Pro, After Effects, CapCut</li>
+                <li>PowerPoint, Excel, Figma, VS Code</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold border-b pb-2">Experience</h2>
+        <ul className="list-disc ml-5 text-gray-700 mt-2 space-y-1">
+          <li>Government Work (I & PRD)</li>
+          <li>MG Hair Company</li>
+          <li>College Union Designer</li>
+          <li>ALWAN Union Designer</li>
+          <li>Freelancer (Schools, Madrassas, Colleges)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold border-b pb-2">Education & Certification</h2>
+        <ul className="list-disc ml-5 text-gray-700 mt-2">
+          <li>Diploma in Graphic Design – 2023</li>
+          <li>Graphics Design Course – 2024</li>
+          <li>Best Designer Award – 2024</li>
+        </ul>
+      </section>
+    </div>
+  );
+}
